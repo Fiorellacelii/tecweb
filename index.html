@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI AVENTURA GRAFICA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+   
+    <link rel="stylesheet" href="misestilos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-5" id="top">
+        <div class="container">
+            <h1 class="display-3">MI AVENTURA GRAFICA</h1>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                  
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#proceso">Proceso de Producción</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#experiencia">Integrantes</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#juego">Jugar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="mb-5">
+            <article class="text-center">
+                <h2 class="section-title mb-4">El mito de Dafne y Apolo</h2>
+                <img src="imagenes/portada.png" alt="portada del juego" class="img-fluid centrado mb-4">
+                <p class="text-justify px-3">
+                    En nuestra comisíon, teniamos que hacer una aventura grafica en base a un mito griego, terminamos eligiendo el mito de Dafne y Apolo que narra un amor no correspondido y una transformación trágica. Apolo, dios de las artes, la música y el sol, se burló de Eros (Cupido), el dios del amor, por su juventud y su arco y flechas, lo que provocó su venganza.
+ Eros, ofendido, disparó dos flechas: una de oro que causaba amor inmediato y otra de plomo que provocaba rechazo absoluto.
+ La flecha de oro hirió a Apolo, quien se enamoró perdidamente de Dafne, una ninfa de los bosques que había jurado permanecer virgen y seguir los caminos de Artemisa.
+ En cambio, la flecha de plomo alcanzó a Dafne, quien lo odió y huyó de él.
+                </p>
+            </article>
+        </section>
+
+       
+
+        <!-- Sección Proceso de Producción -->
+        <section id="proceso" class="proceso-produccion mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-title">Proceso de Producción del Juego</h2>
+                
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="paso mb-4">
+                        <h4><span class="paso-numero">1</span>Conceptualización</h4>
+                        <p>
+                            Lo primero que hicimos despues de elegir el mito, fue hacernos un mapa con todos los acontecimientos y decisiones que iban a ocurrir en el jeugo. Siendo la linea central la histori aoriginal y tomando bifurcaciones a partir de esa base.
+                              <img src="imagenes/proc.png" alt="proceso" class="img-fluid centrado mb-4">
+
+                        </p>
+                    </div>
+
+                    <div class="paso mb-4">
+                        <h4><span class="paso-numero">2</span>Diseño de Personajes</h4>
+                        <p>
+                            Para los personajes queriamos que se vean con un estilo mas anime o simolificado. 
+                            para hacer a Apolo nos basamos en sus descripciones en distintos mitos, siendo un homnre muy apuesto de cabello largo, sin barba y su tipica corona de laurel.
+                            Con dafne nos tomamos la libertad de hacerla como nos parecia mejor, ya que en el mito no se la descrive fisicamente mas alla de decir que era hermosa.
+                            <img src="imagenes/uno.png" alt="fotodeljuego" class="img-fluid centrado mb-4">
+
+
+                        </p>
+                    </div>
+
+                    <div class="paso mb-4">
+                        <h4><span class="paso-numero">3</span>Programación en p5.js</h4>
+                        <p>
+                            En nuestro código organizamos todo el funcionamiento del juego usando varias estructuras y funciones clave. Primero, definimos variables globales para guardar la pantalla actual, la música, los efectos de sonido y todas las imágenes que usamos, lo cual nos permite controlar el flujo del juego desde cualquier parte del programa.
+
+En la función preload() cargamos todos los recursos que necesitábamos antes de que el juego comenzara: la canción de fondo, el sonido de clic y las 16 imágenes que representan cada pantalla de la historia. Eso asegura que todo esté listo antes de empezar.
+
+Luego, en setup(), configuramos el tamaño del lienzo y definimos que el juego inicia en la pantalla 0.
+
+La función draw() es el corazón del programa. Ahí establecimos el fondo y configuramos qué debe mostrarse según el valor de la variable pantalla. Cada pantalla muestra una imagen correspondiente y, aunque desactivamos los rectángulos guía, dejamos preparada la estructura para visualizar las zonas clickeables si fuese necesario.
+
+Usamos la función mousePressed() para detectar cuándo el jugador hace clic y, según la posición del mouse y la pantalla actual, decidimos qué acción tomar: avanzar la historia, elegir entre dos opciones, volver al inicio o abrir los créditos. También ahí controlamos la lógica para reproducir, pausar o reiniciar la música.
+
+Además, creamos funciones auxiliares para mostrar círculos o rectángulos que representan áreas donde habría botones, lo que nos ayuda a visualizar y organizar mejor la interfaz.
+
+Finalmente, estructuramos toda la navegación del juego mediante un sistema de pantallas enlazadas
+                        </p>
+                    </div>
+
+                    <div class="paso mb-4">
+                        <h4><span class="paso-numero">4</span>Tratamiento de imagenes</h4>
+                        <p>
+                            Para el tratamiento de imagenes usamos una estetica general basada en el anime, con globos de texto que contienen una breve representacion de el texto narrativo que pusimos en la parte inferior de todas las imagenes. Ademas decidimos poner botones medio futuristas/neones de color azul con una tipografia blanca que contraste, buscando una estetica de interfaz digital. 
+
+                             <img src="imagenes/dos.png" alt="fotodeljuego" class="img-fluid centrado mb-4">
+                        </p>
+                    </div>
+
+                    <div class="paso mb-4">
+                        <h4><span class="paso-numero">5</span>Testeo y correcciones</h4>
+                        <p>
+                            A la hora de probar la aventura, se nos dificultaba el momento de colocar el soido, no sabiamos por que no se reproducia y en ningun lado nos saltaba un error, miramos varias veces el video explicativo del profesor David hasta que nos dimos cuenta que no habiamos incluido la libreria de sonido de p5js. 
+                            <img src="imagenes/quebolu.png" alt="somostontas" class="img-fluid centrado mb-4">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección integrantes -->
+        <section id="Integrantes" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="section-subtitle mb-3">Integrantes</h3>
+                    
+                    </a>
+
+                    <img src="imagenes/fio.png" alt="fotodeFio" class="img-fluid centrado mb-4">
+                    <p class="text-justify">
+                       Hola, soy Fiorella Celi y me encantan los animales; convivo con dos gatos, dos perros y una tortuga que hacen mi vida más divertida. Disfruto muchísimo de los videojuegos, especialmente Red Dead Redemption 2, mi favorito por su ambientación y sus personajes. También me gusta pintar, una actividad que me permite relajarme y expresar mi creatividad.
+
+                        <img src="imagenes/ori.png" alt="fotodeOri" class="img-fluid centrado mb-4">
+                     <p class="text-justify"> Hola, soy Oriana Capurro. Me encantan las películas de horror y el anime. TambiÃ©n voy al gimnasio de forma regular, tanto por rutina como para despejarme. AdemÃ¡s disfruto dibujar y crear cosas, es una de mis formas favoritas deexpresarme.
+                    <br><br>
+                    <a href="https://orianabcapurro.github.io/Daphne-Apollo/" target="_blank" class="external-link">Ver la página de Oriana</a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Juego (para integrar tu p5.js) -->
+        <section id="juego" class="mb-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="section-title mb-4">Juega la Aventura Gráfica</h2>
+            <a href="#top" class="d-inline-block mb-3">
+                <!-- tu flecha aquí si quieres -->
+            </a>
+            <div class="game-container p-4">
+                <!-- IFRAME CENTRADO Y SIN EL DIV ALERT -->
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <iframe src="p5/index.html" 
+                            width="650" 
+                            height="490" 
+                            frameborder="0"
+                            style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <h6>Un sitio de prueba de HTML, CSS y Bootstrap</h6>
+            <p class="mb-0 mt-2">Trabajo Final - Aventura Gráfica Interactiva - Celi Fiorella - Oriana Betsabé Capurro</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
